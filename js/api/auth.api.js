@@ -1,7 +1,7 @@
 // js/api/auth.api.js
 
 // La URL base de tu backend (¡asegúrate de que esté corriendo!)
-const API_URL = ' https://gestor-restaurante-proyecto-fullstack-1p49.onrender.com/api/v1';
+const API_URL = ' http://localhost:10000/api/v1';
 
 /**
  * Llama al endpoint de registro del backend.

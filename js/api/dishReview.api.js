@@ -1,7 +1,7 @@
 // js/api/dishReview.api.js
 
 import AuthService from '../services/auth.service.js';
-const API_URL = ' https://gestor-restaurante-proyecto-fullstack-1p49.onrender.com/api/v1';
+const API_URL = 'http://localhost:10000/api/v1';
 
 /**
  * [Usuario] Obtiene las reseñas de un platillo específico.

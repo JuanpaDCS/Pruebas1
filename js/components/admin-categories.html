@@ -1,0 +1,51 @@
+<section id="admin-categories" class="active-section">
+    <div class="admin-container">
+        <div class="header">
+            <button id="backToAdminBtn" class="back-btn btn-register">
+                ← Volver al Panel
+            </button>
+            <div class="logo">🗂️</div>
+            <h1>Gestión de Categorías</h1>
+            <p class="subtitle">Crear, editar y eliminar categorías</p>
+        </div>
+        
+        <div class="create-restaurant-form" style="background: #f8f9fa;">
+            <h2>Crear Nueva Categoría</h2>
+            <form id="createCategoryForm">
+                <div class="form-group">
+                    <input type="text" name="categoryName" placeholder="Nombre de la categoría" required>
+                </div>
+                <div class="form-group">
+                    <textarea name="categoryDescription" placeholder="Descripción (opcional)" rows="2"></textarea>
+                </div>
+                <button type="submit" class="btn-register">Crear Categoría</button>
+            </form>
+        </div>
+
+        <div class="admin-restaurants-list">
+            <h2>Categorías Existentes</h2>
+            <div id="categoryListContainer">
+                </div>
+        </div>
+    </div>
+</section>
+
+<div id="categoryEditModal" class="modal-overlay" style="display: none;">
+    <div class="modal-content">
+        <span class="modal-close-btn">&times;</span>
+        <h2>Editar Categoría</h2>
+        <form id="editCategoryForm">
+            <input type="hidden" name="editCategoryId">
+            
+            <div class="form-group">
+                <label for="editCategoryName">Nombre:</label>
+                <input type="text" name="editCategoryName" required>
+            </div>
+            <div class="form-group">
+                <label for="editCategoryDescription">Descripción:</label>
+                <textarea name="editCategoryDescription" rows="3"></textarea>
+            </div>
+            <button type="submit" class="btn-register">Guardar Cambios</button>
+        </form>
+    </div>
+</div>

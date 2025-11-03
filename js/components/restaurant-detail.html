@@ -1,0 +1,136 @@
+<section id="restaurant-detail" class="active-section">
+    <div class="restaurant-detail-container">
+        <div class="header">
+            <button id="backToAdminBtn" class="back-btn btn-register">
+                ← Volver
+            </button>
+            
+            <div id="restaurantDetailImage" class="restaurant-image-header">
+                </div>
+
+            <div class="logo">🍽️</div>
+            <h1 id="restaurantDetailName">Cargando...</h1>
+            <p class="subtitle" id="restaurantDetailDescription">...</p>
+            <div class="restaurant-meta">
+                <span class="category" id="restaurantDetailCategory">...</span>
+                <span class="location" id="restaurantDetailLocation">...</span>
+            </div>
+        </div>
+
+        <div class="dishes-section">
+            <div class="section-header">
+                <h2>Platillos</h2>
+                <button id="addDishBtn" class="btn-add" style="display: none;">
+                    + Agregar Platillo
+                </button>
+            </div>
+            
+            <div id="addDishForm" class="add-form" style="display: none;">
+                <h3 id="dishFormTitle">Nuevo Platillo</h3>
+                <form id="dishForm">
+                    
+                    <input type="hidden" name="dishId">
+
+                    <div class="form-group">
+                        <input type="text" name="dishName" placeholder="Nombre del platillo" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="dishDescription" placeholder="Descripción del platillo" required rows="3"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <input type="number" name="dishPrice" placeholder="Precio ($)" step="0.01" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="url" name="dishImageUrl" placeholder="URL de la imagen (opcional)">
+                    </div>
+                    <div class="form-group">
+                        <select name="dishCategory" required>
+                            <option value="">Categoría del platillo</option>
+                            <option value="Entrada">Entrada</option>
+                            <option value="Plato Principal">Plato Principal</option>
+                            <option value="Postre">Postre</option>
+                            <option value="Bebida">Bebida</option>
+                        </select>
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" class="btn-register" id="submitDishFormBtn">Crear Platillo</button>
+                        <button type="button" id="cancelDishBtn" class="btn-cancel">Cancelar</button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="dishes-list" id="dishesList">
+                </div>
+        </div>
+
+        <div class="reviews-section">
+            <div class="section-header">
+                <h2>Reseñas del Restaurante</h2>
+                 <button id="addReviewBtn" class="btn-add" style="display: none;">
+                    + Agregar Reseña
+                </button>
+            </div>
+
+            <div id="addReviewForm" class="add-form" style="display: none;">
+                <h3 id="restaurantReviewFormTitle">Deja tu reseña</h3>
+                <form id="restaurantReviewForm">
+                    <input type="hidden" name="reviewId"> <div class="form-group">
+                        <textarea name="reviewComment" placeholder="Tu comentario..." required rows="4"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Calificación:</label>
+                        <div class="rating-stars" id="restaurantReviewRatingStars">
+                            <span class="star" data-rating="1">⭐</span>
+                            <span class="star" data-rating="2">⭐</span>
+                            <span class="star" data-rating="3">⭐</span>
+                            <span class="star" data-rating="4">⭐</span>
+                            <span class="star" data-rating="5">⭐</span>
+                        </div>
+                        <input type="hidden" name="reviewRating" id="restaurantReviewRating" required>
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" class="btn-register" id="submitRestaurantReviewBtn">Publicar</button>
+                        <button type="button" class="btn-cancel" id="cancelRestaurantReviewEditBtn" style="display: none;">Cancelar Edición</button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="reviews-list" id="reviewsList">
+                </div>
+        </div>
+    </div>
+</section>
+
+<div id="dishReviewModal" class="modal-overlay" style="display: none;">
+    <div class="modal-content">
+        <span class="modal-close-btn">&times;</span>
+        <h2 id="dishReviewModalTitle">Reseñas de (Nombre del Platillo)</h2>
+        
+        <div class="add-form" id="dishReviewFormContainer">
+            <h3 id="dishReviewFormTitle">Deja tu reseña</h3>
+            <form id="dishReviewForm">
+                <input type="hidden" name="reviewId"> <div class="form-group">
+                    <textarea name="reviewComment" placeholder="Tu comentario..." required rows="4"></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Calificación:</label>
+                    <div class="rating-stars" id="dishReviewRatingStars">
+                        <span class="star" data-rating="1">⭐</span>
+                        <span class="star" data-rating="2">⭐</span>
+                        <span class="star" data-rating="3">⭐</span>
+                        <span class="star" data-rating="4">⭐</span>
+                        <span class="star" data-rating="5">⭐</span>
+                    </div>
+                    <input type="hidden" name="reviewRating" id="dishReviewRating" required>
+                </div>
+                <div class="form-actions">
+                    <button type="submit" class="btn-register" id="submitDishReviewBtn">Publicar</button>
+                    <button type="button" class="btn-cancel" id="cancelDishReviewEditBtn" style="display: none;">Cancelar Edición</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="reviews-list" id="dishReviewList">
+            </div>
+    </div>
+</div>
